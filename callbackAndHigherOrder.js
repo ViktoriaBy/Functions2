@@ -1,11 +1,11 @@
 ////////// PROBLEM 1 //////////
 
 /*
-  Write a function called multiply that takes in three parameters: two numbers and a callback function.  
+  Write a function called multiply that takes in three parameters: 
+  two numbers and a callback function.  
   Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
 */
-
-// CODE HERE
+const multiply = (num1, num2, func) => func(num1 * num2)
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
