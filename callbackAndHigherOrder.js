@@ -55,16 +55,16 @@ const first = (arr, func) => func(arr[0])
   Then invoke the callback, passing in the last element in the array as the argument.
 */
 
-// CODE HERE
+const last = (arr, func) => func(arr.slice(-1)[0]);
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// last(names, lastName => {
-//   console.log('The last name in names is ' + lastName)
-// })
+ //last(names, lastName => {
+ //  console.log('The last name in names is ' + lastName)
+ //})
 
 
 
