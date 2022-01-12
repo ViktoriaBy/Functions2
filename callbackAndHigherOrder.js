@@ -99,11 +99,19 @@ const contains = (arr, newName, func) => func(arr.includes(names))
 
 /*
   Write a function called uniq that takes in an array and a callback function.
-  Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
+  Remove any duplicate values from the array, and invoke the callback with the modified 
+  array as an argument.
   Hint: you can use a nested for loop to do this.
 */
 
-// CODE HERE
+
+function uniq(arr, func) {
+  return names.filter((item, 
+      index) => names.indexOf(item) === index);
+}
+
+console.log(uniq(names));
+
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
