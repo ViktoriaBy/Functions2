@@ -104,14 +104,25 @@ const contains = (arr, newName, func) => func(arr.includes(names))
   Hint: you can use a nested for loop to do this.
 */
 
+//------------------------MY SOLUTION -----------------------
 
-function uniq(arr, func) {
-  return names.filter((item, 
-      index) => names.indexOf(item) === index);
+////function uniq(arr, func) {
+//  return names.filter((item, 
+//      index) => names.indexOf(item) === index);
+//}
+
+const uniq = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+      for (let x = i + 1; x < arr.length; x++) {
+          if (arr[i] === arr[x]) {
+              arr.splice(x, 1)
+              x--
+          }
+      }
+  }
+
+  cb(arr)
 }
-
-console.log(uniq(names));
-
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -122,7 +133,7 @@ console.log(uniq(names));
 
 uniq(names, uniqArr => console.log(`The new names array with all the duplicate items removed is ${uniqArr}`))
 
-
+//console.log(uniq(names));
 
 ////////// PROBLEM 6 //////////
 
