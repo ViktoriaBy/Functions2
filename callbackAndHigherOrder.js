@@ -155,7 +155,7 @@ const each = (arrNames, func) => arrNames.forEach((element, index) => func(eleme
   'The item at index [INDEXPARAM] is [ITEMPARAM].'
 */
 
-// CODE HERE
+each(names, (item, index) => `The item at index ${index} is ${item}.`)
 
 
 ////////// PROBLEM 7 //////////
