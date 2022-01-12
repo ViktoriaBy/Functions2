@@ -188,16 +188,24 @@ var users = [
 ]
 // Do not edit the code above.
 
-// CODE HERE 
+const getUserById = (arrUser, id, func) => {
+  for (let i = 0; i < arrUser.length; i++) {
+    if (arrUser[i].id === id) {
+        return func(arrUser[i])
+    }
+}
+}
+
+
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// })
+ getUserById(users, '16t', user => {
+   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+ })
 
 ////////// CHALLENGE //////////
 
@@ -215,7 +223,7 @@ var users = [
   the two parameters together and return the sum.
 */
 
-// CODE HERE
+const addingFactory = num1 => num2 => num1 + num2
 
 /*
   Now that you have addingFactory, you can create other
@@ -229,7 +237,7 @@ var users = [
   10 as an arguemnt.
 */
 
-// CODE HERE
+const addTen = addingFactory(10)
 
 /*
   Now the inner function is stored in the addTen variable! 
@@ -241,7 +249,8 @@ var users = [
   to see the different outputs.
 */
 
-// CODE HERE
+console.log(addTen(10));
+console.log(addTen(40))
 
 /*
   Let's make another function from the addingFactory. 
@@ -254,4 +263,7 @@ var users = [
   to add any number to your favorite number!
 */
 
-// CODE HERE
+const addThirty = addingFactory(56)
+
+console.log(addThirty(456))
+console.log(addThirty(62223))
