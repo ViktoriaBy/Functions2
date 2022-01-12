@@ -139,10 +139,13 @@ uniq(names, uniqArr => console.log(`The new names array with all the duplicate i
 
 /* 
   Write a function called each that takes in an array of names and a callback function. 
-  For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
+  For each name in the array, invoke the callback and pass in the name and the name's index 
+  as arguments.
 */
 
-// CODE HERE 
+const each = (arrNames, func) => arrNames.forEach((element, index) => func(element, index))
+  
+
 
 
 /*
